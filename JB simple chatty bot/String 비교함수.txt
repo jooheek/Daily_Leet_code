@@ -5,3 +5,5 @@
 변수.startsWith("문자");
 변수a.equalsIgnoreCase(변수b);
 변수.substring(시작index,끝index);
+
+- 문자열 사이의 빈칸은 trim() 이 아니라 replace()로 없앤다
