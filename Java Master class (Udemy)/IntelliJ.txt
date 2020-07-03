@@ -1,0 +1,12 @@
+<intelliJ>
+ctrl+ d = duplicate
+ctrl+ r = replace
+ctrl+ f = find
+
+<google>
+summary of operators java 
+java operator precedence table
+
+
+<TODO>
+ int vs. integer (wrapper class)
