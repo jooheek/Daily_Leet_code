@@ -1,3 +1,7 @@
-문자.endsWith("string");
-문자.replace("old","new");
-문자.replaceAll("","");
+변수.endsWith("string")
+변수.replace("old","new");
+변수.replaceAll("","");
+
+변수.startsWith("문자");
+변수a.equalsIgnoreCase(변수b);
+변수.substring(시작index,끝index);
