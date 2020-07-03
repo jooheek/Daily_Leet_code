@@ -1,0 +1,3 @@
+문자.endsWith("string");
+문자.replace("old","new");
+문자.replaceAll("","");
