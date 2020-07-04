@@ -1,5 +1,5 @@
 
-###2. prints exactly the same as 1.
+2. prints exactly the same as 1.
 int[] squareNumbers = new int[10];
 
 1.
