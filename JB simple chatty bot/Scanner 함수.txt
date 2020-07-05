@@ -1,0 +1,3 @@
+scanner.nextInt(); 한 숫자
+scanner.nextLine(); 그 줄 전체
+scanner.next(); 한 문자열
