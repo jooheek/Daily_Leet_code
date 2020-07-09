@@ -1,3 +1,7 @@
 scanner.nextInt(); 한 숫자
 scanner.nextLine(); 그 줄 전체
 scanner.next(); 한 문자열
+
+
+scanner.close(); 
+위의 함수를 다 쓰고나서 닫아줘야함
