@@ -1,5 +1,8 @@
 scanner.nextInt(); 한 숫자
 scanner.nextLine(); 그 줄 전체
+ *
+1.scanner.nextInt(); - scanner.next();
+2.scanner.nextInt(); - scanner.nextLine(); -scanner.nextLine();
 scanner.next(); 한 문자열
 
 
