@@ -8,6 +8,5 @@ scanner.next(); 한 문자열
 scanner.hasNextInt(); 숫자가 맞는지 확인
 
 
-
 scanner.close(); 
 위의 함수를 다 쓰고나서 닫아줘야함
