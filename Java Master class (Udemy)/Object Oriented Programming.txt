@@ -11,3 +11,12 @@ and that we know that any animal would have these traits
 ->create constructor to use Animal fields 
 	*super is to call the constructor that is for the class that we're extending from.
 	*we can assign extra states(fields) and extra behaviors(methods) that aren't necessarily applicable to other animals
+
+Inheritance part2
+ (usage of super.move()) 
+	//eventhough there's move method set up,code is actually telling it not to look at the current class
+	//super.move() which says only execute the move method in the super class
+
+	//using super means  saying to Java dont try and execute the move method in 'Dog' class
+	//if there is one in this class, automatically go to the super class
+	//in other words, the class we're extending from ,inheriting from in this case 'Animal' class
