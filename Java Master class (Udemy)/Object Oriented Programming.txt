@@ -1,0 +1,13 @@
+OOP allows us to do to create classes commonly used standard behavior from other classes
+
+ex animals
+- we could create a very basic class that we could actually apply to each and every animal out there,
+and that we know that any animal would have these traits
+
+->create class 'Animal' add state(field) and behavior(method)
+
+->create class'Dog' which inherit from 'Animal'class
+
+->create constructor to use Animal fields 
+	*super is to call the constructor that is for the class that we're extending from.
+	*we can assign extra states(fields) and extra behaviors(methods) that aren't necessarily applicable to other animals
