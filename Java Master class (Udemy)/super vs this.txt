@@ -2,13 +2,13 @@ super : access/call the parent class members(variables and methods)
 	->commonly used with method overriding when we call a method with the same name from the parent class
 
 
-class SuperClass(){
+class SuperClass(){	//parent class
 	public void printMethod(){
 	
 	}
 }
 
-class SubClass extends SuperClass{
+class SubClass extends SuperClass{	//subclass
 	@override
 	public void printMethod(){
 		super.printMethod();->	*without the keyword super it could be recursive call
