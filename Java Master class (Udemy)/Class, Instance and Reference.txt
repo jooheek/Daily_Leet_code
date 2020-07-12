@@ -1,0 +1,10 @@
+Reference
+
+Class :bluprint of a house
+
+Instance: build an house based on the blueprint
+	
+	Using  the blueprint, we can build as mary houses as we like based on those blueprints.
+
+Reference: address of paticular house.	
+
