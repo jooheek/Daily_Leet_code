@@ -1,5 +1,6 @@
 super : access/call the parent class members(variables and methods)
 this : call the current class members(variable and methods)
 	->required when we have a parameter with the same name as an instance variable(field)
-
+	->usually used with constructors and setters since there is a parameter with the same name
+	
 both of them cannot be used in static areas
