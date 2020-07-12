@@ -2,9 +2,22 @@ Reference
 
 Class :bluprint of a house
 
-Instance: build an house based on the blueprint
-	
+Instance: build an house based on the blueprint	
 	Using  the blueprint, we can build as mary houses as we like based on those blueprints.
 
 Reference: address of paticular house.	
+	we can pass references as parameters to constuctors and methods
 
+	references
+House    	<------------  blueHouse
+	<--------- anotherHouse
+
+(two references that point to the same object in memory)
+
+anotherHouse.setColor("yellow"):
+->
+blueHouse.getColor();="yellow"
+
+
+Once we change the color of one,both references still point to the same object
+= there is still just one physical house at that one address, even though we have written the same address on two pieces of paper. 
