@@ -1,2 +1,0 @@
-summary of operators java 
-java operator precedence table
