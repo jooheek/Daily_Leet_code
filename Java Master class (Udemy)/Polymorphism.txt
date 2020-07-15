@@ -1,0 +1,5 @@
+다형성 
+	여러가지 형태를 가질 수 있는 능력
+	한 타입의 참조변수로 여러 타입의객체를 참조할 수 있도록 함
+	조상클래스 타입의 참조변수로 자손클래스의 인스턴스를 참조할 수 있도록 함(자바의 정석)
+	method or mechanism in OOP that allows actions to act differently based on the actual object that the action is being perfomed in
