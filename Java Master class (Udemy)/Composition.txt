@@ -1,0 +1,5 @@
+Inheritance와 차이점 :
+	 컴퓨터를 예를 들어보자면 노트북은 컴퓨터의 한 종류이므로 컴퓨터 클래스를 상속받는다. 하지만 구성(Composition)은 컴퓨터를 구성하는 요소이므로 상속을 받을 수 없음
+	motherboard, case,monitor를 각자 클래스로 만들고  각 클래스에 field, constructor,getter 와 setter, function 을 작성한다.
+	Main 클래스에 각 클래스의 인스턴스를 불러와서 PC instance안에 넣으면 pc를 조립하는것과 같은 그림을 그릴 수 있다. 	
+ 
