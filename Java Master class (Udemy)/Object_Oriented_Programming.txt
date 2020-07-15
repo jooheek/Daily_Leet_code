@@ -1,4 +1,7 @@
-OOP allows us to do to create classes commonly used standard behavior from other classes
+OOP
+	- allows us to do to create classes commonly used standard behavior from other classes
+	- fundamentals of OOP: Classes,Objects,Constructors,Inheritance
+	- Composition,Polymorphism,Encapsulation
 
 ex animals
 - we could create a very basic class that we could actually apply to each and every animal out there,
