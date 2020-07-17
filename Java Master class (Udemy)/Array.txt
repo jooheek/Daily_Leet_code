@@ -1,3 +1,5 @@
 boolean array elements would be initialized to false
 
 string or other objects would be null
+
+ArrayIndexOutOfBoundsException: accessing index out ot range
