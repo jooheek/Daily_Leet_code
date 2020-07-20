@@ -5,3 +5,12 @@ Inheritance와 차이점 :
  
 Composition :
 	object를 object안에 만드는것이다. Master Object(PC)가 pc에 속한 Object를 관리하고 통제하는것
+
+	class Point{
+		int x; int y;
+	};
+
+	class Circle{
+		Point c = new Point();
+		int z:
+	}
