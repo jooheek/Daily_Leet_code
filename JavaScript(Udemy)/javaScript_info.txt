@@ -1,0 +1,8 @@
+클라이언트 언어였지만 node.js로 서버쪽에서도 사용중
+
+html:content
+css:presentation(style,layout)
+javascript:dynamic effect,programming
+
+html은 단어 css는 형용사, js는 동사의 역할을 한다고 보면된다
+ 
