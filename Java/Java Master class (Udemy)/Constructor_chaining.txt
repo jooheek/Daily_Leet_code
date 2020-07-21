@@ -1,0 +1,36 @@
+package com.company;
+
+public class Rectangle {
+    private int x;
+    private int y;
+    private int width;
+    private int height;
+
+    //CONSTRUCTOR CHAINING
+    //THE LAST CONSTRUCTOR has the responsibility to initializing the variables
+
+    //first constructor
+    public Rectangle() {
+        this(0,0);
+        //calls second constructor
+    }
+    //second constructor
+    public Rectangle(int width, int height) {
+        this(0,0,width,height);
+        //calls third constructor
+    }
+
+    //third constructor
+    public Rectangle(int x, int y, int width, int height) {
+        //initiate variables
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+    //no matter what constructor we call,
+    // the variables will always be initialized in third constructor
+//by using constructor chaining, we can avoid code duplication
+
+	

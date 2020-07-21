@@ -1,0 +1,38 @@
+각 노드에 있는 address 정보로 데이터가 연결되는 list
+
+
+    public static void main(String[] args) {
+        LinkedList<String> placesToVisit = new LinkedList<String>();
+        placesToVisit.add("Sydney");
+        placesToVisit.add("Melbourne");
+        placesToVisit.add("Birsbane");
+        placesToVisit.add("Perth");
+        placesToVisit.add("Canberra");
+        placesToVisit.add("Darwin");
+        placesToVisit.add("Sydney");
+
+        printList(placesToVisit);
+        placesToVisit.add(1,"Alice Springs");
+        printList(placesToVisit);
+    }
+
+
+    private static void printList(LinkedList<String> Linkedlist){
+        Iterator<String> i = Linkedlist.iterator();
+        while(i.hasNext()){
+            System.out.println("Now visiting "+i.next());
+        }
+        System.out.println("=====================");
+    }
+*iterator: another way of accessing and going through all entries that are in a particular array, or an arraylist or a linkedlist
+.iterator: part of the linkedlist
+
+
+다음 entry로 point
+*.next() 는 i++와 같은 역할 다음 노드로 넘어가기 전에 현재의 value를 return
+ .hasnext()는 value가 있으면 다음으로 넘어감
+
+ListIterator
+	.listIterator : 이전 record로 돌아갈수 있게한다.
+
+

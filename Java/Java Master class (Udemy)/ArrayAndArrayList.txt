@@ -1,0 +1,10 @@
+boolean array elements would be initialized to false
+
+string or other objects would be null
+
+ArrayIndexOutOfBoundsException: accessing index out ot range
+
+dereference
+	anotherArray = new int[]{1,2,3,4,5};//array 변형전에 정의하면  다른 공간에 있는 array를 가져옴
+	
+
