@@ -1,4 +1,0 @@
-
-        int a =1571;
-        int length =(int)(Math.log10(a)+1);
-        System.out.println("길이 :"+ length );
