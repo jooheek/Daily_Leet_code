@@ -14,4 +14,10 @@ blueprint
 
 *constraint 삭제 이유: 화면에서 다른 요소와의 제약을 끊어서 어떤 화면으로 변경돼도 그대로 남는다
 
+
 텍스트, 버튼, 레이아웃 삽입 및 관리는 palette
+
+*developer.andriod.com 에서 정보 검색
+
+scaleType 정렬기능 각 버전에 따라 사진 크기, 위치 조절가능
+	ex)centerInside: 가로길이 맞게 중앙 정렬
