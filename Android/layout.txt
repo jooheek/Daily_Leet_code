@@ -1,0 +1,17 @@
+design
+	preview of what your design's gonna look like when you run the app	
+
+blueprint
+	sort of schematic diagram
+	show the relative position of thing in the layout
+
+*메모리 별로 없을땐 블루프린트로만 작업할것 
+
+사진은 app>res>drawable에 ctrl+v
+사진삽입 : palette>common>imageview> layout에 드래그 후 사진선택
+사진 삭제: component tree >delete
+사진 위아래양옆에 있는 모서리 클릭> delet connection(constraint) 
+
+*constraint 삭제 이유: 화면에서 다른 요소와의 제약을 끊어서 어떤 화면으로 변경돼도 그대로 남는다
+
+텍스트, 버튼, 레이아웃 삽입 및 관리는 palette
