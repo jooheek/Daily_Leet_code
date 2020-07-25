@@ -1,0 +1,5 @@
+Goals of Spring
+-lightweight development with Java POJOs
+-dependency injection to promote loose coupling
+-declarative programming with AOP
+-minimize boilerplate Java code(자바 코드의 표준화를 줄인다)
