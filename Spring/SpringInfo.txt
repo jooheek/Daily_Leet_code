@@ -3,3 +3,7 @@ Goals of Spring
 -dependency injection to promote loose coupling
 -declarative programming with AOP
 -minimize boilerplate Java code(자바 코드의 표준화를 줄인다)
+
+Inversion of Control 제어의 역전
+the design process of externalizing the construction and management
+메소드나 객체의 호출작업을 개발자가 결정하는 것이 아니라 외부에서 결정되는것
