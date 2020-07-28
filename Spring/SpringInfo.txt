@@ -7,3 +7,23 @@ Goals of Spring
 Inversion of Control 제어의 역전
 the design process of externalizing the construction and management
 메소드나 객체의 호출작업을 개발자가 결정하는 것이 아니라 외부에서 결정되는것
+
+Spring 개발 순서
+1.Spring bean환경설정
+	spring bean:자바 객체
+2.Spring container 생성
+	spring container = ApplicationContext
+	-ClassPathXml....,AnnotationConifg...,Generic... 
+	
+3.Spring container에서 bean 불러오기
+
+Dependency Injection
+1.생성자 주입
+2.setter 주입
+
+의존성주입 순서
+1. 의존성 interface,class정의
+2.의존성 주입을 위한 생성자 만들기
+3.spring 설정파일에 의존성주입 환경설정
+
+annotation auto-wiring
