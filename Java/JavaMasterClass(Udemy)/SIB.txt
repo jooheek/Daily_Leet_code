@@ -1,0 +1,5 @@
+static initializtion block
+
+ non-static block은 클래스의 인스턴스가 만들어질 때 마다 불러진다.
+static block은 그 메소드가 생성될때  한 번만 불러진다. 따라서 정보의 보안이 필요할 때 정보를 딱한번만 불러올수있게 만든다
+
