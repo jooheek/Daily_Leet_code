@@ -21,3 +21,6 @@ blueprint
 
 scaleType 정렬기능 각 버전에 따라 사진 크기, 위치 조절가능
 	ex)centerInside: 가로길이 맞게 중앙 정렬
+
+100dp = 200px(dp는 기기의 크기에 따라 상대적인 비율을 나타냄, px은 절대적 크기)
+	layout_width,height,textSize 모두 변경가능
