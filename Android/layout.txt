@@ -26,3 +26,13 @@ scaleType 정렬기능 각 버전에 따라 사진 크기, 위치 조절가능
 	layout_width,height,textSize 모두 변경가능
 
 다른 widget과 연동하려면 constraint으로 각모서리를 연결하면 된다
+
+서로다른 두개의 button을 직렬로 놓으려면 버튼클릭>baseline>선끌어서 다른 버튼의 baseline에 연결 
+두개의 버튼을 이동시키려면 연결된 버튼을 이동하는 방법이 있다.
+
+hoizontal bias,vertical bias두개를 0로 하는 이유는 텍스트가 적을 때 레이아웃의 위로 올라가야함 ...?????
+
+직렬로 스크롤 가능하게 하기위한 설정
+attribute>scrollbars>vertical: true
+	(>scrollindicators>right:true,end:true 오른쪽에서 왼쪽으로 작성되는 언어를 위한 방법현재 andriod studio 버전엔 없음)
+
