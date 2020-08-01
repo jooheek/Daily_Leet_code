@@ -1,0 +1,46 @@
+        String string ="im a string yes i am";
+        System.out.println(string);
+        String yourString = string.replaceAll("i","YOU");
+        System.out.println(yourString);
+
+        String alphanumeric = "abcdeFjeefg1234";
+        System.out.println(alphanumeric.replaceAll(".","Y"));
+        //.은 모든 문자를 대체하는 wildcard
+
+        System.out.println(alphanumeric.replaceAll("^abcdee","YYY"));
+        //^+문자열로 특정지었기 때문에 YYY가 대체된다
+
+        String secondString = "abcdeeFjabcdejeefg1234";
+        System.out.println(secondString.replaceAll("^abcdee","YYY"));
+        System.out.println(secondString.replaceAll("abcdee","YYY"));
+        //^(carrot)을 문자열 앞에 써놨기 떄문에 가장 처음 나오는 문자열만 대체된다
+
+        System.out.println(alphanumeric.matches("^hello"));
+        System.out.println(alphanumeric.matches("^abcdee"));
+        System.out.println(alphanumeric.matches("^abcdeeefg1234"));
+        //문자열 전체와 동일할때만 true 값이 나온다
+
+        System.out.println(alphanumeric.replaceAll("eefg1234$","THE END"));
+        //문자열+$ 으로 끝나는게 확인되면 마지막에 해당하는 문자열이 붙여진다.
+        System.out.println(alphanumeric.replaceAll("[aei]","X"));
+        //배열에 해당하는 문자열이 있으면 replacement로 대체된다.
+        System.out.println(alphanumeric.replaceAll("[aei]","i replaced a letter here"));
+        System.out.println(alphanumeric.replaceAll("[aei][Fj]","x"));
+        //두번째 배열에 있는 문자들앞에 첫번째 배열에 있는 문자가 존재할 경우 replacement로 대체된다
+
+
+=====================================================================
+
+im a string yes i am
+YOUm a strYOUng yes YOU am
+YYYYYYYYYYYYYYY
+abcdeFjeefg1234
+YYYFjabcdejeefg1234
+YYYFjabcdejeefg1234
+false
+false
+false
+abcdeFjTHE END
+XbcdXFjXXfg1234
+i replaced a letter herebcdi replaced a letter hereFji replaced a letter herei replaced a letter herefg1234
+abcdxjeefg1234
