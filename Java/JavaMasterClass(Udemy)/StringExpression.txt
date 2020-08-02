@@ -28,6 +28,19 @@
         System.out.println(alphanumeric.replaceAll("[aei][Fj]","x"));
         //두번째 배열에 있는 문자들앞에 첫번째 배열에 있는 문자가 존재할 경우 replacement로 대체된다
 
+        System.out.println("harry".replaceAll("[Hh]arry","Harry"));
+        System.out.println("Harry".replaceAll("[Hh]arry","Harry"));
+
+---------------------------------------------------------------------------------------------------------------
+        String newAlphanumeric = "abcdefGHIjJKLM3579";
+        System.out.println(newAlphanumeric.replaceAll("[^ej]","X"));
+        //[^+문자] 해당문자를 제외한 모든 문자열은 replacement에 대체된다
+
+        System.out.println(newAlphanumeric.replaceAll("[abcdeg35]","X"));
+        System.out.println(newAlphanumeric.replaceAll("[a-f3-8]","X"));
+        //배열에 해당하는 문자열은 모두 replacement로 대체 대소문자 가림
+        System.out.println(newAlphanumeric.replaceAll("[a-fA-I3-8]","X"));
+
 
 =====================================================================
 
@@ -44,3 +57,12 @@ abcdeFjTHE END
 XbcdXFjXXfg1234
 i replaced a letter herebcdi replaced a letter hereFji replaced a letter herei replaced a letter herefg1234
 abcdxjeefg1234
+
+------------------------------------------------------------
+
+Harry
+Harry
+XXXXeXXXXjXXXXXXXX
+XXXXXfGHIjJKLMXX79
+XXXXXXGHIjJKLMXXX9
+XXXXXXXXXjJKLMXXX9
