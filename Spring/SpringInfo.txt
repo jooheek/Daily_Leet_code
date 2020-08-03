@@ -17,13 +17,21 @@ Spring 개발 순서
 	
 3.Spring container에서 bean 불러오기
 
+POJO기반 구성 : 다른 프레임워크와 달리 별도의 API쓰지 않는다. 
+= 특정라이브러리나 컨테이너의 기술에 의존적이지 않음->생산성유리,테스트 작업시 유연
+
 Dependency Injection
 1.생성자 주입
 2.setter 주입
+-ApplicationContext가 필요한 객체를 생성하고 필요한 객체를 주입하는 역할을 해준다.
+따라서 스프링을 사용하면 객체와 객체를 분리해서 생성하고 이를 엮는 작업을 하는 식의 개발을함
+(ApplicationContext가 관리하는 객체를 bean이라 한다 빈과빈의 의존관계는 xml,어노테이션,java설정방식 이용)
 
 의존성주입 순서
 1. 의존성 interface,class정의
 2.의존성 주입을 위한 생성자 만들기
 3.spring 설정파일에 의존성주입 환경설정
 
-annotation auto-wiring
+트랜잭션 지원
+
+
