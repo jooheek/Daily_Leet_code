@@ -5,3 +5,12 @@ Database :MySQL, SQLite
 SQLtryirEditor 에서 데이터 자동생성해서 연습가능
 
 GoormIDE에 MySQL 다운받는 방법(https://gist.github.com/nax3t/2773378c4d1bada8d66d12f4d5210248)
+
+goorm terminal
+> mysql -ctl start 시작
+> mysql -ctl stop 끝
+> mysql -ctl cli 데이터베이스 들어가기(sql문 작성)
+> exit 나옴
+> ctrl +c 강제종료
+
+
