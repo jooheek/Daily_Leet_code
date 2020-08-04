@@ -1,0 +1,7 @@
+
+Database Management System : PostgreSQL, Oracle Database
+Database :MySQL, SQLite
+
+SQLtryirEditor 에서 데이터 자동생성해서 연습가능
+
+GoormIDE에 MySQL 다운받는 방법(https://gist.github.com/nax3t/2773378c4d1bada8d66d12f4d5210248)
