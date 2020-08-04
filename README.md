@@ -2,4 +2,4 @@
 README.md
 
 - 코드 공부 스터디 기록용입니다.(2020.06.29~)
-- Leet Code, JetBrains academy에 있는 코드로 공부중
+- JetBrains academy에 있는 문제풀고 Udemy 강의 복습,정리하며 공부중
