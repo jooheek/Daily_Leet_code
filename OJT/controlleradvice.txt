@@ -1,0 +1,9 @@
+http status 예외처리
+
+<https://medium.com/@jovannypcg/understanding-springs-controlleradvice-cd96a364033f>
+
+처음에는 모든 컨트롤러에 @exceptionhandler메소드를 붙였다.
+컨트롤러마다 exception을 관리했기 떄문에 다른 컨트롤러에 동일한 에러가 발생해도 한번에 처리할 수 없었고
+따라서 중앙화된 예외처리 방법을 생각해냈다.
+@controlleradvice를 이용해 한 어플리케이션의 오류를 한번에 처리하는 방법이다.
+restcontrolleradvice는 restcontroller만, controlleradvice는 controller의 오류만 처리한다
