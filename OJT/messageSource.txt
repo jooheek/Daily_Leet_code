@@ -1,0 +1,6 @@
+[](https://devks.tistory.com/42)
+
+
+messageUtil클래스를 따로 만드는 방식
+
+[공통메시지 처리하기](https://otrodevym.tistory.com/entry/Spring%EC%97%90%EC%84%9C-%EB%A9%94%EC%84%B8%EC%A7%80-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0)
