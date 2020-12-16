@@ -1,6 +1,6 @@
 //Task : find the roots of a cubic equation
 
-- ax^3+bx^2+cx+d=0 함수를 만족하는 해를 구하라
+- ax^3+bx^2+cx+d=0 함수를 만족하는 해를 구하라 
 - 0에서 1000 사이
 
 import java.util.Scanner;
