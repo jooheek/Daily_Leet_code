@@ -26,6 +26,7 @@ public class Main {
 //Grades
 - 5-> A, 4->B, 3->C, 2->D
 -학생수는 n명
+
 import java.util.Scanner;
 
 public class Main {
