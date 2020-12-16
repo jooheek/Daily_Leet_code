@@ -1,8 +1,7 @@
 //Task : find the roots of a cubic equation
 
-- ax^3+bx^2+cx+d=0 í•¨ìˆ˜ë¥¼ ë§Œì¡±í•˜ëŠ” í•´ë¥¼ ì°¾ì•„ë¼.
-- 0ë¶€í„° 1000 ì‚¬ì´ì˜ ìˆ«ìë‹¤.
-
+- ax^3+bx^2+cx+d=0 ÇÔ¼ö¸¦ ¸¸Á·ÇÏ´Â ÇØ¸¦ ±¸ÇÏ¶ó
+- 0¿¡¼­ 1000 »çÀÌ
 
 import java.util.Scanner;
 
