@@ -25,4 +25,32 @@ public class Main {
 
 //Grades
 - 5-> A, 4->B, 3->C, 2->D
-- 
+-학생수는 n명
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int As = 0;
+        int Bs = 0;
+        int Cs = 0;
+        int Ds = 0;
+        int gradesNum = scanner.nextInt();
+        for(int i=0;i<gradesNum;i++){
+            switch(scanner.nextInt()){
+                case 2:Ds++;
+                break;
+                case 3:Cs++;
+                break;
+                case 4:Bs++;
+                break;
+                case 5:As++;
+                break;
+                default:
+                    break;
+            }
+        }
+        System.out.println(Ds+" "+Cs+" "+Bs+" "+As);
+    }
+}
+
