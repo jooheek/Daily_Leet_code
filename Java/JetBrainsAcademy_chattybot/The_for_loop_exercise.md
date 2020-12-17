@@ -1,9 +1,11 @@
-###Task : find the roots of a cubic equation
+### Task : find the roots of a cubic equation
 
 - ax^3+bx^2+cx+d=0 함수를 만족하는 해를 구하라 
 - 0에서 1000 사이
 
-`import java.util.Scanner;
+<pre>
+<code>
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,17 +22,20 @@ public class Main {
             }
         }
     }
-}`
+}
+</code>
+</pre>
 
-__ __ __ __ __ __ __
-
-##Grades
+============================================
+### Grades
 -왜인지는 모르겠지만 2부터 5등급으로 점수를 매긴다
 - 5-> A, 4->B, 3->C, 2->D
 -학생수는 n명
-<br/>
 
-`import java.util.Scanner;
+<pre>
+<code>
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -56,5 +61,8 @@ public class Main {
         }
         System.out.println(Ds+" "+Cs+" "+Bs+" "+As);
     }
-}`
+}
+</code>
+</pre>
+
 
