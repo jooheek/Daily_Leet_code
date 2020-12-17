@@ -30,7 +30,7 @@ public class Main {
 
 ### Grades
 
--왜인지는 모르겠지만 2부터 5등급으로 점수를 매긴다
+- 왜인지는 모르겠지만 2부터 5등급으로 점수를 매긴다
 - 5-> A, 4->B, 3->C, 2->D
 -학생수는 n명
 
@@ -98,4 +98,31 @@ public class Main {
     }
 }
 ```
+---------------------------------------
 
+### Arithmetic average
+
+- output : 숫자 두개
+- 두 숫자 사이에서 3으로 나눠지는 모든 수의 평균 ex)input :-5,12  -3 ,0,3,6,9,12 output: 4.5
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int sum =0;
+        int count =0;
+
+        for(int i=num1;i<=num2;i++){
+            if(i%3 == 0){
+                sum = sum+i;
+                count = count +1;
+            }
+        }
+        System.out.println(sum/(double)count);
+    }
+}
+```
