@@ -26,15 +26,16 @@ public class Main {
 </code>
 </pre>
 
-============================================
+---------------------------------------
+
 ### Grades
+
 -왜인지는 모르겠지만 2부터 5등급으로 점수를 매긴다
 - 5-> A, 4->B, 3->C, 2->D
 -학생수는 n명
 
 <pre>
 <code>
-
 import java.util.Scanner;
 
 public class Main {
@@ -65,4 +66,36 @@ public class Main {
 </code>
 </pre>
 
+---------------------------------------
+
+### Fizz Buzz
+
+- 뭔 문제가 이렇지 
+- 숫자 두개를 입력한다. ex) input : 8,15 ouptput :  8 Fizz Buzz 11 Fizz ... 15
+- 3의 배수일때는 Fizz 5의 배수일때는 Buzz 3과5의 배수일때는 FizzBuzz
+- 둘다로 안나눠질때는 숫자그대로 나옴
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+
+        for(int i=num1 ;i<=num2;i++){
+            if(i%3 ==0 && i%5==0){
+                System.out.println("FizzBuzz");
+            }else if(i % 5 ==0){
+                System.out.println("Buzz");
+            }else if(i%3 ==0){
+                System.out.println("Fizz");
+            }else{
+                System.out.println(i);
+            }
+        }
+    }
+}
+```
 
