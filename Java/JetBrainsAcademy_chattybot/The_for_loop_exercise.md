@@ -126,3 +126,56 @@ public class Main {
     }
 }
 ```
+
+
+----------------------
+
+###  Numbers divisible by six
+- 첫번째 숫자가 그 다음에 오는 숫자들의 총 갯수 
+- 6의 배수인 숫자들의 총 합을 구하라
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int sum =0;
+        int value;
+
+        for(int i =0;i<num1;++i){
+            value = scanner.nextInt();
+            sum = value % 6 ==0? sum + value : sum;
+        }
+        System.out.println(sum);
+    }
+}
+```
+
+--------------------------
+
+### The count of numbers divisible by N
+
+- 숫자 세개 a,b,n이 있다 a이상 b이하의 숫자중 n으로 나눠지는 수의 갯수를 구하라
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+        int count = 0;
+        int sum = 0;
+        for(int a = num1;a<=num2;a++){
+            if(a % num3 == 0){
+                 count = count +1;
+            }
+        }
+        System.out.println(count);
+    }
+}
+```
