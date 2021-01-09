@@ -69,3 +69,85 @@ class Main {
     }
 }
 ```
+
+
+### Task : The largest element of a sequence
+
+- 연속된 숫자의 마지막은 0 이고 0을 제외한 숫자들의 가장 큰 수를 구하라
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int biggestNUM=0;
+        int number;
+        do{
+            number = scanner.nextInt();
+            if(number>biggestNUM){
+                biggestNUM = number;
+            }
+        }while(number!=0);
+        System.out.println(biggestNUM);
+    }
+}
+```
+
+### Task :  Squares of natural numbers
+
+- input 보다 작은, 숫자 들의 제곱을 나열하라
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        int i=1;
+        do{
+            for(i =1; i*i<=input;i++){
+                System.out.println(i*i);
+            }
+        }while(input  > i*i);
+    }
+}
+```
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int i =1;
+        while(i*i<=n){
+            System.out.println(i*i);
+            ++i;
+        }
+    }
+}
+```
+
+### Task : The length of the sequence
+
+- 0이 입력되기 전까지 입력된 수들의 갯수를 구하라
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int count =0;
+        int number;
+        do{
+            number=scanner.nextInt();
+            ++count;
+        }while (number!=0);
+        System.out.println(count-1);
+    }
+}
+```
