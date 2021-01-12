@@ -92,3 +92,95 @@ public class Main {
     }
 }
 ```
+
+
+### Task : The integer barrier
+
+- 숫자를 연이어 넣는다. 만약 0이 나오면 이전까지 모든 수의 합산이 나온다. 만약 그 수가 1000이상이면 수 -1000 이 나온다.
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int a;
+        int sum = 0;
+
+        while ((a = scanner.nextInt()) != 0) {
+            sum += a;
+            if (sum >= 1000) {
+                sum -= 1000;
+                break;
+            }
+        }
+        System.out.println(sum);
+    }
+}
+```
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int n;
+        while (scanner.hasNext()) {
+            n = scanner.nextInt();
+            if (n == 0) {
+                System.out.println(sum);
+                break;
+            }
+            sum += n;
+            if (sum >= 1000) {
+                System.out.println(sum - 1000);
+                break;
+            }
+        }
+    }
+}
+```
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        int sum = 0;
+        int barrier = 1000;
+
+        while (number != 0) {
+            sum += number;
+            if (sum >= barrier) {
+                sum -= barrier;
+                break;
+            }
+            number = scanner.nextInt();
+        }
+        System.out.print(sum);
+    }
+}
+```
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int input;
+
+        do {
+            input = scanner.nextInt();
+            sum += input;
+        } while (sum < 1000 && input != 0);
+
+        System.out.println(sum >= 1000 ? sum - 1000 : sum);
+    }
+}
+```
