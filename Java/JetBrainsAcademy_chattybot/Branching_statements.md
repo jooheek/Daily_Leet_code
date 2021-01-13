@@ -19,7 +19,7 @@ class Main {
 }
 
 ```
-
+-------
 
 ### Task :The continue statement
 
@@ -69,6 +69,7 @@ class Main {
 }
 
 ```
+---------
 
 ### Task : Even or odd
 
@@ -92,7 +93,7 @@ public class Main {
     }
 }
 ```
-
+---------
 
 ### Task : The integer barrier
 
@@ -183,4 +184,114 @@ class Main {
         System.out.println(sum >= 1000 ? sum - 1000 : sum);
     }
 }
+```
+-----------
+
+### Task : Bus Tour 
+
+- 버스의 높이, 지나갈 다리의 높이의 갯수, 각 다리의 높이를 받는다.
+- 버스의 높이가 다리의 높이보다 낮을 경우  지나갈 수 있지만 높을 경우 다리에 충돌하게된다.
+-  만약 충돌한다면 몇번째 다리에 충돌하는지 구하고 충돌하지 않는다면 충돌하지 않는다는 문장을 출력하라.
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int heightOfTheBus = scanner.nextInt();
+        int numberOfTheBridges = scanner.nextInt();
+        int busInfo[] = new int[numberOfTheBridges+1];
+        boolean pass = false;
+
+        for(int i=0; i<numberOfTheBridges;i++){
+            busInfo[i] = scanner.nextInt();
+        }
+        for(int j=0; j<numberOfTheBridges;j++){
+            if(heightOfTheBus< busInfo[j]){
+                pass =true;
+                continue;
+            }else {
+                System.out.println("Will crash on bridge " + (j+1));
+                pass = false;
+                break;
+            }
+        }
+        if(pass == true){
+            System.out.println("Will not crash");
+        }
+    }
+}
+
+``` 
+
+- 배열에 다리의 높이를 저장하지 않고 충돌할 경우 바로 구문이 출력되는 형태 
+- System.exit(0) 는 정상종료 그 외의 숫자는 비정상 종료라고 여긴다.
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        int heightOfBus = scanner.nextInt();
+        int numOfBridges = scanner.nextInt();
+
+        for (int i = 1; i <= numOfBridges; i++) {
+            int heightOfBridge = scanner.nextInt();
+
+            if (heightOfBridge <= heightOfBus) {
+                System.out.print("Will crash on bridge " + i);
+                System.exit(0);
+            }
+        }
+        System.out.print("Will not crash");
+    }
+}
+```
+- print 구문에 삼항연산자 사용해볼 것
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int heightOfTheBus = scanner.nextInt();
+        int numOfTheBridge = scanner.nextInt();
+        boolean crash = false;
+        int heightOfTheBridge;
+
+        for (int i = 1; i <= numOfTheBridge; ++i) {
+            heightOfTheBridge = scanner.nextInt();
+            if (heightOfTheBridge <=heightOfTheBus) {
+                System.out.println("Will crash on bridge " + i);
+                crash = true;
+                break;
+            }
+        }
+        System.out.println(crash ? "" : "Will not crash");
+    }
+}
+```
+
+-----------------
+- do while문은 조건에 맞지 않는 데이터도  시행된다.
+
+```
+        int input;
+        do {
+            input = scanner.nextInt();
+            nums.add(input);
+        } while (input != 0);
+```
+
+-  while 문을 사용할 때는 input을 다시 정의해야한다.
+```	
+        int input =scanner.nextInt();
+        while (input != 0) {
+            nums.add(input);
+            input = scanner.nextInt();
+        }
 ```
