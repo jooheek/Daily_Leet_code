@@ -179,3 +179,25 @@ public class Main {
     }
 }
 ```
+
+------------------
+
+###Task : The smallest value
+- long형의 양수 m를 입력하면 n!>m 을 만족하는 n을 구하라
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Long a = scanner.nextLong();
+        int i=1;
+        for(;i<=a;i++){
+            a = a/i;
+
+        }System.out.println(i);
+    }
+}
+```
+
