@@ -295,3 +295,111 @@ public class Main {
             input = scanner.nextInt();
         }
 ```
+----------
+### Task : The Sequence
+
+- 입력된값이 7일 때, 1 2 2 3 3 3 4 를 출력하는 함수를 만들어라.
+- 각 숫자는 자신의 갯수만큼 반복되고 총 출력된 수는 입력된 수와 동일하다.
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int input = scanner.nextInt();
+        int count =0;
+
+        for(int i =1; i<=input;i++){
+            for(int j =1;j<=i;j++){
+               if(count< input){
+                   System.out.print(i+" ");
+               }
+                count++;
+            }
+        }
+    }
+}
+```
+
+----------
+### Task : The (un)-ordered sequence
+
+
+-  연속되는 숫자가 입력된다. 그 수들이 오름차순 또는 내림차순이면 true, 둘다 아니면 false를 출력하라.
+- ArrayList 쓸 때 되도록 타입을 지정할것. 타입 지정 안하면 각 입력이 객체형으로 들어와서 비교 불가능
+
+```
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> nums = new ArrayList<Integer>();
+        boolean ascending = false;
+        boolean descending = false;
+        int input = scanner.nextInt();
+
+        while(input !=0) {
+            nums.add(input);
+            input = scanner.nextInt();
+        }
+
+        for(int i =0; i<nums.size()-1;i++){
+            if(nums.get(i) <= nums.get(i+1)){
+                ascending = true;
+            }else {
+                ascending = false;
+                break;
+            }
+        }
+        for(int j =0; j<nums.size()-1;j++){
+            if(nums.get(j) >= nums.get(j+1)){
+                descending = true;
+            }else{
+                descending = false;
+                break;
+            }
+        }
+
+        System.out.println(descending || ascending);
+    }
+}
+```
+- 또는 이런 방식으로 ArrayList를 사용하지 않는 방법도 있다.
+- ascending 과 descending을 boolean이 아니라 int형으로 정의하고 둘중 하나가 0이면 정렬되지않다고 출력된다.
+
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int prev = scanner.nextInt();
+        int next = scanner.nextInt();
+        int ascending = 0;
+        int descending = 0;
+
+        do {
+            if (next == 0) {
+                break;
+            }
+            if (prev < next) {
+                ascending++;
+            } else if (prev > next) {
+                descending++;
+            }
+            prev = next;
+            next = scanner.nextInt();
+        } while (next != 0);
+
+        boolean isSorted = true;
+
+        if (ascending != 0 && descending != 0) {
+            isSorted = false;
+        }
+
+        System.out.println(isSorted);
+    }
+}
+```
