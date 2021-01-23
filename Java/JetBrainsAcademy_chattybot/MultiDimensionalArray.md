@@ -62,11 +62,41 @@ public class Main {
 ```
 -------
 
-### Task :
-- 
+### Task : Rotate a rectangle array
+- n X m 배열이 입력된다 이 배열을 시계방향으로 90도 돌린 배열을 출력하라.
 -
 
 ```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        int cubic[][] = new int [n][m];
+        int cubicM[][] = new int[m][n];
+
+        for(int i =0;i<n;i++){
+            for(int j =0;j<m;j++){
+                cubic[i][j] = scanner.nextInt();
+            }
+        }
+        //3 4
+        //11 12 13 14
+        //21 22 23 24
+        //31 32 33 34
+
+        for(int i =0;i<m;i++){
+            cubicM[0][i] = cubic[i][0];
+        }
+        //31 21 11
+        //32 22 12
+        //33 23 13
+        //34 24 14
+        System.out.println(cubicM[0][0]+" "+cubicM[0][1]+" "+cubicM[0][2]+" ");
+    }
+}
 ```
 -------
 
