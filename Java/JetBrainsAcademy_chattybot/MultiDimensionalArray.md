@@ -88,12 +88,97 @@ class Main {
 }```
 -------
 
-### Task :
-- 
--
+### Task : Cinema
+
+- n,m배열인 영화관이 있다 배열의 요소가 0이면 자리가 있고 1이면 자리가 없다.
+- 연속된 k자리가 비어있는지 확인하고 자리가 있으면 그 자리의 열을 출력하고 자리가 없으면 0 을 출력하라. 
+
+
+- Pattern , Matcher를 사용하는 방법 
+-  정규식을 사용해야만 풀리는 문제가 아니기 때문에 굳이 이렇게 까지 할 필요는 없는것 같다.
 
 ```
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        int k = 0;
+        int cinema[][] = new int[n][m];
+
+        for (int i = 0; i < cinema.length; i++) {
+            for (int j = 0; j < cinema[i].length; j++) {
+                cinema[i][j] = scanner.nextInt();
+            }
+        }
+        k = scanner.nextInt();
+        String regex = String.format("[0]{%d}", k);
+        Pattern p = Pattern.compile(regex);
+
+        for (int i = 0; i < cinema.length; i++) {
+            String row = "";
+            for (int j = 0; j < cinema[i].length; j++) {
+                row = row + cinema[i][j];
+            }
+            Matcher match = p.matcher(row);
+            if (match.find()) {
+                System.out.println(i + 1);
+                break;
+            } else if (i == cinema.length - 1) {
+                System.out.println(0);
+            }
+        }
+    }
+}
 ```
+- 연속된 0 이 들어가는 지 확인 할 때 counter를 리셋해주는 방법이 있다.
+
+```
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int counter = 0;
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        int k =0;
+        int cinema[][] = new int[n][m];
+
+        for (int i = 0; i < cinema.length; i++) {
+            for (int j = 0; j < cinema[0].length; j++) {
+                cinema[i][j] = scanner.nextInt();
+            }
+        }
+        k = scanner.nextInt();
+        for (int i = 0; i < cinema.length; i++) {
+            if (counter == k) {
+                break;
+            }
+            counter = 0;
+            for (int j = 0; j < cinema[0].length; j++) {
+                if (cinema[i][j] == 0) {
+                    counter++;
+                    if (counter == k) {
+                        System.out.println(i + 1);
+                        break;
+                    }
+                } else {
+                    counter = 0;
+                }
+            }
+        }
+        if (counter < k) {
+            System.out.println(0);
+        }
+    }
+```
+
 -------
 
 ### Task :
@@ -101,5 +186,6 @@ class Main {
 -
 
 ```
+
 ```
 -------
