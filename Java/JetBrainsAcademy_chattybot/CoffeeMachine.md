@@ -54,3 +54,98 @@ public class CoffeeMachine {
     }
 }
 ```
+
+
+Task : Coffee Machine 2
+
+- 커피머신에 400ml물, 540ml 우유, 120g 커피빈, 9개의 컵이 있다. 
+- 에스프레소, 라떼, 카푸치노를 살수있고(buy) 커피머신에 내용물을 충전할 수 있고(fill) 커피머신에 있는 돈을 뽑을수있다.(take)
+```
+import java.util.Scanner;
+
+public class CoffeeMachine {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int water = 400;
+        int milk = 540;
+        int coffeeBean = 120;
+        int cups = 9;
+        int money = 550;
+
+        System.out.println("The coffee machine has:\n" +
+                water+" of water\n" +
+                milk+" of milk\n" +
+                coffeeBean+" of coffee beans\n" +
+                cups+" of disposable cups\n" +
+                money+" of money\n");
+
+        System.out.print("Write action (buy, fill, take): \n" +
+                ">");
+
+        String choice = scanner.next();
+
+        if(choice.equals("buy") ){
+            System.out.print("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino: \n" +
+                    "> ");
+            int beverage = scanner.nextInt();
+            switch (beverage){
+                case 1:
+                    water = water - 250;
+                    coffeeBean = coffeeBean -16;
+                    cups = cups -1;
+                    money = money + 4;
+                    break;
+                case 2:
+                    water = water -350;
+                    milk = milk -75;
+                    coffeeBean = coffeeBean - 20;
+                    cups = cups -1;
+                    money = money +7;
+                    break;
+                case 3:
+                    water = water -200;
+                    milk = milk-100;
+                    coffeeBean = coffeeBean -12;
+                    cups = cups -1;
+                    money = money +6;
+                    break;
+                default :
+                    System.out.println("choose one");
+                    break;
+            }
+        }else if(choice.equals("fill") ){
+            System.out.print("Write how many ml of water do you want to add: \n" +
+                    ">");
+            int addWater = scanner.nextInt();
+            System.out.print("Write how many ml of milk do you want to add: \n" +
+                    ">");
+            int addMilk = scanner.nextInt();
+            System.out.print("Write how many grams of coffee beans do you want to add: \n" +
+                    "> ");
+            int addCoffeeBean = scanner.nextInt();
+            System.out.print("Write how many disposable cups of coffee do you want to add: \n" +
+                    "> ");
+            int addCup = scanner.nextInt();
+
+            water = water +addWater;
+            milk = milk + addMilk;
+            coffeeBean = coffeeBean + addCoffeeBean;
+            cups = cups + addCup;
+
+        }else if(choice.equals("take") ){
+            System.out.println("I gave you $550");
+            money = 0;
+        }else{
+            System.out.println("nope!");
+        }
+
+        System.out.println("\nThe coffee machine has:\n" +
+                water+" of water\n" +
+                milk+" of milk\n" +
+                coffeeBean+" of coffee beans\n" +
+                cups+" of disposable cups\n" +
+                money+" of money");
+
+    }
+}
+```
