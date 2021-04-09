@@ -144,6 +144,97 @@ public class CoffeeMachine {
 
 }
 ```
+- 좀 더 기능별로 분리해봤다 이게 더 깔끔하긴하다.
+
+```
+package machine;
+
+import java.util.Scanner;
+
+public class CoffeeMachine {
+    final static Scanner scanner = new Scanner(System.in);
+    private static int water = 400;
+    private static int milk = 540;
+    private static int coffeeBean = 120;
+    private static int cups = 9;
+    private static int money = 550;
+
+    public static void main(String[] args) {
+        printStock();
+        printAction();
+        String choice = scanner.next();
+
+        if(choice.equals("buy") ){
+            buy();
+        }else if(choice.equals("fill") ){
+            fill();
+        }else if(choice.equals("take") ){
+            System.out.println("I gave you $"+money);
+            money = 0;
+        }
+        printStock();
+    }
+
+    public static void printStock(){
+       System.out.println("\nThe coffee machine has:\n" +
+                water+" of water\n" +
+                milk+" of milk\n" +
+                coffeeBean+" of coffee beans\n" +
+                cups+" of disposable cups\n" +
+                "$"+money+" of money\n");
+    }
+
+    public static void printAction(){
+        System.out.print("Write action (buy, fill, take, remaining, exit): \n" +
+                "> ");
+
+    }
+    public static void buy(){
+        System.out.print("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino: \n" +
+                "> ");
+        int beverage = scanner.nextInt();
+        switch (beverage){
+            case 1:
+                water -= 250;
+                coffeeBean -= 16;
+                cups -= 1;
+                money += 4;
+                break;
+            case 2:
+                water -= 350;
+                milk -= 75;
+                coffeeBean -= 20;
+                cups -= 1;
+                money += 7;
+                break;
+            case 3:
+                water -= 200;
+                milk -= 100;
+                coffeeBean -= 12;
+                cups -= 1;
+                money += 6;
+                break;
+            default :
+                System.out.println("choose one");
+                break;
+        }
+    }
+    public static void fill(){
+        System.out.print("Write how many ml of water do you want to add: \n" +
+                ">");
+        water += scanner.nextInt();
+        System.out.print("Write how many ml of milk do you want to add: \n" +
+                ">");
+        milk += scanner.nextInt();
+        System.out.print("Write how many grams of coffee beans do you want to add: \n" +
+                "> ");
+        coffeeBean += scanner.nextInt();
+        System.out.print("Write how many disposable cups of coffee do you want to add: \n" +
+                "> ");
+        cups += scanner.nextInt();
+    }
+}
+```
 
 
 
